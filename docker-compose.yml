@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+   udemy:
+     image: scrap_amazon_books
+     build:
+       context: .
+       dockerfile: Dockerfile
+     environment:
+       - search_keyword=python
+     volumes:
+       - ./output:/output/:rw
+
